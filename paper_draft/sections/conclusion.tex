@@ -1,0 +1,11 @@
+\section{Conclusion}
+
+In this work, we established fundamental complexity bounds for automated geometric theorem discovery, proving the existence of a threshold function $T(n) = O(n^3 \log n)$ that characterizes the computational resources required for reliable novel theorem generation. Our analysis provides the first rigorous theoretical framework for understanding the resource requirements of automated mathematical discovery systems.
+
+The key contribution of this paper is the proof that the probability of discovering a novel geometric theorem of length $n$ approaches $1 - e^{-n}$ asymptotically when computational resources exceed $T(n)$. This result significantly improves upon the exponential bounds suggested in \cite{chalmers2015learning}, where the complexity was conjectured to be $\Omega(2^n)$.
+
+While our work focuses specifically on geometric theorems, the proof techniques developed here may generalize to other domains of mathematical discovery. The complexity threshold we established suggests that automated theorem discovery, while computationally intensive, remains tractable for statements of moderate length. This contrasts with the more pessimistic assessments in recent literature on automated reasoning systems \cite{ling2025complex}.
+
+Future work should investigate whether the $O(n^3 \log n)$ bound is tight and explore potential improvements through specialized heuristics or domain-specific constraints. Additionally, extending these results to higher-order logics and more expressive mathematical frameworks remains an important open challenge.
+
+The theoretical framework developed in this paper provides a foundation for understanding the fundamental limits and possibilities of automated mathematical discovery, offering both practical guidance for system design and theoretical insights into the nature of mathematical creativity.

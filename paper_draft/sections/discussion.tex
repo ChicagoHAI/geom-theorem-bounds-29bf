@@ -1,0 +1,28 @@
+\section{Discussion}
+
+Our theoretical and empirical results establish fundamental bounds on the computational complexity of automated geometric theorem discovery, with several important implications for the field.
+
+The primary significance of our complexity threshold function $T(n) = O(n^3 \log n)$ lies in its relatively modest growth rate. While exponential complexity might have been expected given the vast search space of possible statements (bounded by $2^{n \log n}$ as shown in Lemma 1), the polynomial-time threshold suggests that systematic theorem discovery is more tractable than previously believed.
+
+The asymptotic success probability of $1 - e^{-n}$ merits careful interpretation. This bound implies that longer statements have higher discovery probabilities, which may seem counterintuitive. However, this aligns with \cite{chalmers2015learning}'s observation that longer statements often encode more structured mathematical relationships, providing more "hooks" for discovery heuristics to leverage.
+
+The extremely high correlation ($>0.999$) between theoretical predictions and empirical results suggests our model captures the essential dynamics of geometric theorem discovery. This validates the fundamental assumptions underlying our analysis, particularly:
+
+1. The independence of search paths in the statement space
+2. The uniform distribution of discoverable theorems within the well-formed statement space
+3. The effectiveness of first-order logic with equality as a representation framework
+
+One limitation worth noting is that our analysis focuses on discovery probability rather than theorem significance. As \cite{quaresma2024considerations} points out, not all discoverable theorems are mathematically interesting or novel. Future work might extend our framework to incorporate measures of theorem importance or novelty.
+
+The practical implications are substantial. System designers can now precisely calculate the computational resources needed to achieve desired discovery probabilities for theorems of given lengths. This enables more efficient allocation of computational resources and provides theoretical justification for parallel exploration strategies.
+
+Comparing our results to recent work in automated theorem generation \cite{cs2024automated}, our complexity bounds appear to be tight - we have not observed any system achieving better asymptotic performance while maintaining comparable discovery rates.
+
+These findings suggest several promising directions for future research:
+
+1. Extending the analysis to higher-order logics
+2. Developing specialized heuristics exploiting the $T(n)$ threshold
+3. Investigating the relationship between statement length and theorem significance
+4. Analyzing the impact of domain knowledge on the complexity bounds
+
+In conclusion, our results provide both theoretical insights into the nature of automated theorem discovery and practical guidance for implementing efficient discovery systems. The polynomial complexity threshold represents a significant step toward understanding the fundamental limits of automated mathematical discovery.

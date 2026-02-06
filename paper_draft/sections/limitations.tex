@@ -1,0 +1,31 @@
+\section{Limitations and Future Work}
+
+While our complexity analysis establishes important theoretical bounds for geometric theorem discovery, several key limitations must be acknowledged:
+
+\textbf{Scope Limitation:} Our framework applies exclusively to first-order logic with equality, which restricts the expressiveness of geometric reasoning. Specifically, statements requiring higher-order logic or modal operators for concepts like continuity are not captured by our $O(n^3 \log n)$ bound. The theorem space $\mathcal{S}_n$ we consider excludes important geometric concepts that require richer logical frameworks.
+
+\textbf{Computational Complexity Assumptions:} The proof of Lemma 1, which bounds the cardinality of the search space by $2^{n \log n}$, assumes that verification of geometric statements can be performed within polynomial time. This assumption may not hold for statements involving:
+
+\begin{itemize}
+\item Transcendental numbers or infinite processes
+\item Geometric constructions requiring arbitrary precision
+\item Statements where verification itself is undecidable
+\end{itemize}
+
+\textbf{Measure-Theoretic Constraints:} Our analysis requires a well-defined measure $\mu$ over the space of geometric statements $\mathcal{S}_n$. For statements involving continuous parameters, this measure may become ill-defined. While we prove that:
+
+\[
+\mu(\mathcal{S}_n) \leq 2^{n \log n}
+\]
+
+this bound assumes effective discretization of the statement space, which may not be valid for all geometric theorems.
+
+\textbf{Resource Limitations:} Though asymptotically polynomial, the complexity bound $T(n) = O(n^3 \log n)$ can still be prohibitive for practical applications. For a modest geometric statement with $n = 100$ logical symbols, the computational resources required may exceed practical limits, despite being theoretically tractable.
+
+Future work should address these limitations by:
+1. Extending the framework to higher-order geometric reasoning systems
+2. Developing tighter bounds for restricted classes of geometric statements
+3. Investigating alternative measure spaces that better capture geometric complexity
+4. Exploring practical approximation algorithms that trade theoretical completeness for computational efficiency
+
+These extensions would significantly enhance the practical applicability of our theoretical results to real-world geometric theorem discovery systems.

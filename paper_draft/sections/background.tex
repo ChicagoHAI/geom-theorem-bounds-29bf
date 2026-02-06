@@ -1,0 +1,47 @@
+\section{Background and Related Work}
+
+The mathematical foundations for automated theorem discovery and pattern mining span several interconnected areas that provide the theoretical basis for our work. We review the key developments and establish notation that will be used throughout this paper.
+
+\subsection{Theoretical Foundations}
+
+Let $\mathcal{L}$ be a first-order logic system with equality, and let $\mathcal{G}$ be a geometric reasoning system operating within $\mathcal{L}$. The fundamental theorem discovery process can be formalized as a mapping:
+
+\[
+F: \mathcal{G} \times \mathcal{H} \rightarrow \mathcal{T}
+\]
+
+where $\mathcal{H}$ represents the space of heuristic search strategies and $\mathcal{T}$ is the set of discoverable theorems. \cite{chalmers2015learning} established core principles for learning-based exploration in automated theorem proving, introducing the concept of guided heuristic search over $\mathcal{H}$.
+
+\subsection{Pattern Mining and Discovery}
+
+Recent work by \cite{wang2020improved} formalized pattern mining through utility measures $u: P \rightarrow \mathbb{R}^+$, where $P$ represents the pattern space. Their framework introduced efficiency bounds:
+
+\[
+\eta(p) = \frac{u(p)}{\text{cost}(p)} \geq \tau
+\]
+
+for some threshold $\tau > 0$. This was extended by \cite{ding2022prefixpruningbased} to distributed settings, while \cite{ma2022analysis} provided algorithmic complexity analysis for healthcare applications.
+
+\subsection{Geometric Completion and Reasoning}
+
+Significant advances in geometric reasoning were made by \cite{cs2024automated}, who developed completion algorithms based on algebraic methods. Their work established the completion operator $C_G: \mathcal{S} \rightarrow \mathcal{S}'$, where $\mathcal{S}$ represents partial geometric statements. \cite{quaresma2024considerations} further refined these approaches by introducing metrics for theorem interestingness.
+
+\subsection{Recent Developments}
+
+Modern approaches have increasingly leveraged machine learning techniques. \cite{ling2025complex} and \cite{zhang2025treeofadeditor} demonstrated how large language models can enhance heuristic discovery. \cite{hottung2025vrpagent} extended these ideas to optimization problems, while \cite{abdellatif2025aapdem} applied similar principles to network analysis.
+
+\subsection{Computational Aspects}
+
+The computational efficiency of theorem discovery systems has been studied extensively. \cite{gabidullina2025data} established convergence rates for distributed optimization:
+
+\[
+\|x_k - x^*\| \leq C\alpha^k
+\]
+
+where $\alpha \in (0,1)$ and $k$ is the iteration count. \cite{goodship2025optimising} provided stability analysis for numerical methods, particularly relevant for dynamic systems exploration.
+
+\subsection{Applications and Extensions}
+
+Pattern mining techniques have found diverse applications, from tourist route clustering \cite{lee2019clustering} to sensor data analysis \cite{qashou2022mining}. \cite{pandey2017developing} and \cite{yu2022data} demonstrated the broader applicability of these methods in data-driven discovery.
+
+This rich theoretical foundation provides the basis for our investigation into complexity bounds for automated theorem discovery. We build particularly on the work of \cite{chalmers2015learning} and \cite{cs2024automated}, while incorporating the efficiency considerations from \cite{gabidullina2025data} and \cite{goodship2025optimising}.
